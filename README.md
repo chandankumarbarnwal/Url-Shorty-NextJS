@@ -1,6 +1,14 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
+## Step 1:
+## copy development.env.local file and change the file name to .env.local
+## setup environment variable values
+
+
+## step 2:
+## run command: npm install
+## run command: npm run dev
 
 First, run the development server:
 

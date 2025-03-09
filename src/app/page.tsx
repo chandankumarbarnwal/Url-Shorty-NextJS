@@ -1,8 +1,34 @@
+import Link from "next/link";
+import { shortenUrl } from "./serverActions/ShortenUrlAction";
+
 export default function Home() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-base-200">
-      <h1 className="text-4xl font-bold text-primary">DaisyUI Test</h1>
-      <button className="btn btn-primary">Click Me</button>
-    </div>
+    <>
+      <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-r from-blue-500 ">
+
+        <div className="p-10 bg-white rounded-lg shadow-2xl max-w-lg ">
+          <h1 className="text-3xl font-bold mb-6 text-center text-gray-700 " >URL SHORTY</h1>
+
+          <form action={shortenUrl} className="space-y-6">
+
+            <input  type="text" placeholder="enter url" name="originalUrl" className="input input-bordered w-full" />
+
+            <button type="submit"  className="btn btn-primary w-full">Shorten</button>
+
+          </form>
+
+          <div className="mt-6 text-center">
+
+            <Link href={"/urls"} >
+              <span className="btn" >View all shortened URLS</span>
+            </Link>
+
+          </div>
+
+        </div>
+
+      </div>
+    </>
+
   );
 }
